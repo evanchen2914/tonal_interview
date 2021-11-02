@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tonal_interview/ui/pages/weight_entry_view.dart';
+import 'package:tonal_interview/utils/styles.dart';
+
+/// Built with Flutter version 2.5.3, channel stable
 
 void main() {
   runApp(MyApp());
@@ -9,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Styles.primaryColor,
       ),
       home: MyHomePage(),
     );
@@ -25,20 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
-    );
+    return WeightEntryView();
   }
 }
